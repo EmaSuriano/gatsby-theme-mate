@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
-    "build": "gatsby build"
+    "build": "gatsby build",
+    "test": "echo 'add some test here!'"
   },
   "dependencies": {
     "gatsby": "^2.32.3",

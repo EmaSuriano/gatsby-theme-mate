@@ -5,6 +5,7 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
+    "start": "yarn workspace example develop",
     "build": "yarn workspace example build"
   },
   "workspaces": [
