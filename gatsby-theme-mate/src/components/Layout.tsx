@@ -1,0 +1,54 @@
+import React, { ReactNode } from 'react';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import baseTheme, { Theme } from '@rebass/preset';
+import { loadIcons } from '../utils/icons';
+import userTheme from '../theme.json';
+import Helmet from './Helmet';
+
+import 'tippy.js/dist/tippy.css';
+
+loadIcons();
+
+const theme: Theme = {
+  ...baseTheme,
+  ...userTheme,
+};
+
+const GlobalStyle = createGlobalStyle`
+  *,
+  *::after,
+  *::before { 
+    box-sizing: inherit;
+    }
+
+    html { 
+      scroll-behavior: smooth;
+    }
+
+  body {
+    
+    box-sizing: border-box; 
+    margin: 0;
+    font-family: Cabin, 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    width: 100vw;
+    background: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.text};
+  }
+`;
+
+type Props = {
+  children: ReactNode;
+};
+
+const Layout = ({ children }: Props) => (
+  <main>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Helmet />
+      {children}
+    </ThemeProvider>
+  </main>
+);
+
+export default Layout;

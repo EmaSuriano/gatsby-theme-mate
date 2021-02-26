@@ -6,8 +6,8 @@
 mkdir my-site
 cd my-site
 yarn init
-# install gatsby-theme-minimal and it's dependencies
-yarn add gatsby react react-dom gatsby-theme-minimal
+# install gatsby-theme-mate and it's dependencies
+yarn add gatsby react react-dom gatsby-theme-mate
 ```
 
 Then add the theme to your `gatsby-config.js`. We'll use the long-form
@@ -17,11 +17,11 @@ here for educational purposes.
 module.exports = {
   plugins: [
     {
-      resolve: "gatsby-theme-minimal",
+      resolve: 'gatsby-theme-mate',
       options: {},
     },
   ],
-}
+};
 ```
 
 That's it, you can now run your gatsby site using
@@ -35,10 +35,10 @@ resources error. Create a simple page in `src/pages/index.js` to see a
 page on the root url.
 
 ```jsx
-import React from "react"
+import React from 'react';
 
 export default function Home() {
-  return <div>My Site!</div>
+  return <div>My Site!</div>;
 }
 ```
 

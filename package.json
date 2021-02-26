@@ -5,11 +5,13 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
-    "start": "yarn workspace example develop",
-    "build": "yarn workspace example build"
+    "start": "yarn workspace example start",
+    "build": "yarn workspace example build",
+    "test": "yarn workspace example test:ci",
+    "check-types": "yarn workspace gatsby-theme-mate check-types"
   },
   "workspaces": [
-    "gatsby-theme-minimal",
+    "gatsby-theme-mate",
     "example"
   ]
 }
