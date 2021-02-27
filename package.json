@@ -9,7 +9,8 @@
     "start": "yarn workspace example start",
     "build": "yarn workspace example build",
     "test": "yarn workspace example test:ci",
-    "check-types": "yarn workspace gatsby-theme-mate check-types"
+    "check-types": "yarn workspace gatsby-theme-mate check-types",
+    "release": "yarn workspace gatsby-theme-mate release"
   },
   "workspaces": [
     "gatsby-theme-mate",
