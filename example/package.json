@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
+    "clean": "gatsby clean",
     "build": "gatsby build",
     "percy": "env-cmd -f ../.env percy exec -t 350 -h cdn-images-1.medium.com -- cypress",
     "test": "yarn percy run",

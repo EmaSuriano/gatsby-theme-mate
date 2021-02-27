@@ -1,37 +1,30 @@
-// These are customizable theme options we only need to check once
-const DEFAULT_LANDING_PATH = '/';
+const assert = require('assert');
+const gatsbySourceMedium = require('gatsby-source-medium/gatsby-node');
+const { createClient } = require('contentful');
 
-// These templates are simply data-fetching wrappers that import components
+const getAboutEntry = (entry) => entry.sys.contentType.sys.id === 'about';
+
 const LandingTemplate = require.resolve(`./src/templates/Home.tsx`);
 const NotFoundTemplate = require.resolve(`./src/templates/NotFound.tsx`);
 
-exports.createPages = async ({ graphql, actions }, themeOptions) => {
-  const { landingPath = DEFAULT_LANDING_PATH } = themeOptions;
+exports.sourceNodes = async (gatsbyConfig, themeOptions) => {
+  const { spaceId: space, accessToken } = themeOptions;
+  const client = createClient({ space, accessToken });
+
+  const { items } = await client.getEntries();
+  const about = items.find(getAboutEntry);
+  assert(about, "Can't fetch about entry from Contentful");
+  const { mediumUser = '@medium' } = about.fields;
+
+  await gatsbySourceMedium.sourceNodes(gatsbyConfig, { username: mediumUser });
+};
+
+exports.createPages = async ({ actions }, themeOptions) => {
+  const { landingPath = '/' } = themeOptions;
   const { createPage } = actions;
-
-  const result = await graphql(`
-    {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
-  if (result.errors) {
-    console.log(result.errors);
-    throw new Error(`Could not query data`, result.errors);
-  }
-
-  const { site } = result.data;
-  const siteTitle = site.siteMetadata.title;
 
   createPage({
     path: landingPath,
-    context: {
-      siteTitle,
-    },
     component: LandingTemplate,
   });
 

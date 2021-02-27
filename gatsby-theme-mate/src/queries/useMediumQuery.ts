@@ -36,13 +36,8 @@ type Response = {
 const EMPTY_RESPONSE = { author: null, posts: [] };
 
 export const useMediumQuery = (): Response => {
-  const { site, mediumUser } = useStaticQuery<QueryResponse>(graphql`
+  const { mediumUser } = useStaticQuery<QueryResponse>(graphql`
     query MediumPostQuery {
-      site {
-        siteMetadata {
-          isMediumUserDefined
-        }
-      }
       mediumUser {
         id
         name
@@ -64,9 +59,10 @@ export const useMediumQuery = (): Response => {
     }
   `);
 
-  if (!site.siteMetadata.isMediumUserDefined) return EMPTY_RESPONSE;
-
   const { posts: rawPosts, ...author } = mediumUser;
+
+  if (author.username === '@medium') return EMPTY_RESPONSE;
+
   const posts = rawPosts.map((p) => ({
     title: p.title,
     text: p.virtuals.subtitle,

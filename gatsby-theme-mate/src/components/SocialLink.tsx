@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { lighten } from 'polished';
 import { SocialLink as SocialLinkType } from '../types';
-import { getIconDefinition } from '../utils/icon-loader';
+import { getIconDefinition } from '../utils/icons';
 
 type Props = SocialLinkType & {
   invert?: boolean;
