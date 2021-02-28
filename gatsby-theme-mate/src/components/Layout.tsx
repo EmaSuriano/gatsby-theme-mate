@@ -1,18 +1,12 @@
 import React, { ReactNode } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import baseTheme, { Theme } from '@rebass/preset';
 import { loadIcons } from '../utils/icons';
-import userTheme from '../theme.json';
+import { theme } from '../theme';
 import Helmet from './Helmet';
 
 import 'tippy.js/dist/tippy.css';
 
 loadIcons();
-
-const theme: Theme = {
-  ...baseTheme,
-  ...userTheme,
-};
 
 const GlobalStyle = createGlobalStyle`
   *,

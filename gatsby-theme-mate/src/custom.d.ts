@@ -24,7 +24,6 @@ declare module '@rebass/preset' {
     primary: string;
     secondary: string;
     muted: string;
-    gray: string;
     highlight: string;
   }
 
