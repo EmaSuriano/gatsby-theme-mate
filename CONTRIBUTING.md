@@ -7,7 +7,7 @@ assessing changes, and helping you finalize your pull requests.
 
 ## Where do I go from here?
 
-If you've noticed a bug or have a feature request, search the [issue tracker](https://github.com/EmaSuriano/gatsby-starter-mate/issues?q=something) to see if someone else in the community has already created a ticket. If not, go ahead and make one!
+If you've noticed a bug or have a feature request, search the [issue tracker](https://github.com/EmaSuriano/gatsby-theme-mate/issues?q=something) to see if someone else in the community has already created a ticket. If not, go ahead and make one!
 
 ## Fork & create a branch
 
