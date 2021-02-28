@@ -1,4 +1,4 @@
-name: Build
+name: Release
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  update-screenshots:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,8 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - run: yarn build
+      - name: Release
         env:
-          ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
-          SPACE_ID: ${{secrets.SPACE_ID}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: yarn release

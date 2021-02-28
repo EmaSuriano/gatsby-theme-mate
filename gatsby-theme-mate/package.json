@@ -1,6 +1,6 @@
 {
   "name": "gatsby-theme-mate",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "main": "index.js",
   "author": "emasuriano",
   "homepage": "https://github.com/EmaSuriano/gatsby-theme-mate",
@@ -12,9 +12,14 @@
     "PWA",
     "portfolio"
   ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
   "scripts": {
     "check-types": "tsc -p . --noEmit",
-    "release": "npm publish"
+    "release": "npx semantic-release"
   },
   "peerDependencies": {
     "gatsby": "^2.6.0"
