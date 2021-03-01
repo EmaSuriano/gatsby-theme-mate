@@ -11,10 +11,10 @@ const Footer = () => {
   const { name, socialLinks } = useSiteQuery();
 
   return (
-    <Box p={[2, 3]} backgroundColor="primary" id="footer">
+    <Box p={[2, 3]} backgroundColor="primary" id="footer" as="footer">
       <FooterContainer>
         <Fade direction="left" triggerOnce>
-          <TextWrapper fontSize={[2, 3]}>
+          <Text fontSize={[2, 3]} color="background">
             <span>{`${name} Portfolio - Powered by `}</span>
             <Link href={GATSBY_URL}>Gatsby</Link>
             <span>, </span>
@@ -24,7 +24,7 @@ const Footer = () => {
             <span role="img" aria-label="heart">
               ❤️
             </span>
-          </TextWrapper>
+          </Text>
         </Fade>
         <Flex>
           <Fade direction="right" triggerOnce cascade damping={0.5}>
@@ -55,10 +55,6 @@ const FooterContainer = styled.div`
       margin-bottom: 10px;
     }
   }
-`;
-
-const TextWrapper = styled(Text)`
-  color: ${({ theme }) => theme.colors.background};
 `;
 
 export default Footer;

@@ -17,10 +17,10 @@ const Container = ({
   children,
   Background = DefaultBackground,
 }: ContainerProps) => (
-  <div id={id && getSectionHref(id)} style={{ position: 'relative' }}>
+  <section id={id && getSectionHref(id)} style={{ position: 'relative' }}>
     <Background />
     <SectionContainer>{children}</SectionContainer>
-  </div>
+  </section>
 );
 
 type HeaderProps = {

@@ -4,14 +4,13 @@ describe('Visual Testing', () => {
   it('Main Page', () => {
     cy.visit('/');
 
-    cy.get('#home').scrollIntoView({ duration: 500 });
-    cy.get('#about').scrollIntoView({ duration: 500 });
-    cy.get('#projects').scrollIntoView({ duration: 500 });
-    cy.get('#writing').scrollIntoView({ duration: 500 });
-    cy.get('#footer').scrollIntoView({ duration: 500 });
+    cy.get('#home').scrollIntoView();
+    cy.get('#about').scrollIntoView();
+    cy.get('#projects').scrollIntoView();
+    cy.get('#writing').scrollIntoView();
+    cy.scrollTo('bottom');
 
-    cy.waitForAnimations();
-
+    cy.wait(4000);
     cy.percySnapshot('Main Page Responsive', {
       widths: SCREENS,
     });
@@ -19,9 +18,6 @@ describe('Visual Testing', () => {
 
   it('404 Page', () => {
     cy.visit('/404');
-
-    cy.waitForAnimations();
-
     cy.percySnapshot('404 Page Responsive', { widths: SCREENS });
   });
 });
