@@ -18,6 +18,7 @@ describe('Visual Testing', () => {
 
   it('404 Page', () => {
     cy.visit('/404');
+    cy.wait(1000);
     cy.percySnapshot('404 Page Responsive', { widths: SCREENS });
   });
 });
