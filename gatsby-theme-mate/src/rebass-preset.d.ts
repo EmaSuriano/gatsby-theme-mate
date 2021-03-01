@@ -1,6 +1,3 @@
-import { Theme } from '@rebass/preset';
-import 'styled-components';
-
 declare module '@rebass/preset' {
   export interface Theme {
     colors: Colors;
@@ -24,7 +21,6 @@ declare module '@rebass/preset' {
     primary: string;
     secondary: string;
     muted: string;
-    gray: string;
     highlight: string;
   }
 
@@ -80,8 +76,4 @@ declare module '*.svg' {
 declare module '*.json' {
   const value: any;
   export default value;
-}
-
-declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
 }

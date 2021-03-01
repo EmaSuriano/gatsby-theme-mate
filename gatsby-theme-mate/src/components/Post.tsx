@@ -18,7 +18,7 @@ export const Post = ({ title, text, cover, url, date, time }: PostProps) => (
     <Text m={3} color="text">
       {text}
     </Text>
-    <ImageLabel bg="primary" color="white" position="bottom-right" round>
+    <ImageLabel bg="primary" color="background" position="bottom-right" round>
       {`${date} - ${Math.ceil(time)} min`}
     </ImageLabel>
   </PostContainer>

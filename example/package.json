@@ -8,15 +8,13 @@
     "start": "gatsby develop",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "percy": "env-cmd -f ../.env percy exec -t 350 -h cdn-images-1.medium.com -- cypress",
-    "test": "yarn percy run",
-    "test:ui": "yarn percy open",
+    "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
+    "test:ui": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
     "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
-    "gatsby-theme-mate": "^1.0.0",
+    "gatsby-theme-mate": "0.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0"
   },
@@ -25,7 +23,6 @@
     "axe-core": "^4.1.2",
     "cypress": "^6.5.0",
     "cypress-axe": "^0.12.2",
-    "env-cmd": "^10.1.0",
     "start-server-and-test": "^1.11.6"
   }
 }

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const theme = require('./src/theme.json');
+const colors = require('./src/colors.json');
 
 module.exports = ({
   accessToken,
@@ -25,8 +25,8 @@ module.exports = ({
           name: 'Mate Portfolio',
           short_name: 'Mate',
           start_url: landingPath,
-          background_color: theme.background,
-          theme_color: theme.primary,
+          background_color: colors.background,
+          theme_color: colors.primary,
           display: 'minimal-ui',
           icon: 'icon.png',
         },

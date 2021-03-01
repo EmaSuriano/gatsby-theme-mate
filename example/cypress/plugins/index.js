@@ -1,5 +1,3 @@
-require('dotenv').config({ path: '../../.env' });
-
 const percyHealthCheck = require('@percy/cypress/task');
 
 module.exports = (on, config) => {

@@ -19,12 +19,12 @@ const StyledLink = styled.a`
     content: '';
     width: 100%;
     height: 3px;
-    background-color: ${({ theme }) => theme.colors.highlight};
+    background-color: ${({ theme }) => theme.colors.secondary};
     transition: all 250ms;
   }
 
   &:hover {
-    color: white;
+    color: ${({ theme }) => theme.colors.background};
 
     &::after {
       height: 110%;

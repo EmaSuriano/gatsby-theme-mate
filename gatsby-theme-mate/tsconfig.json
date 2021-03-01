@@ -10,7 +10,6 @@
     "jsx": "react",
     "lib": ["es2017"],
     "skipLibCheck": true,
-    "types": [],
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],

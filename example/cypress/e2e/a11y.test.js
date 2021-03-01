@@ -21,14 +21,12 @@ function terminalLog(violations) {
 describe('Accessibility checks', () => {
   it('Main Page', () => {
     cy.visit('/');
-    cy.waitForAnimations();
     cy.injectAxe();
     cy.checkA11y(null, null, terminalLog);
   });
 
   it('404', () => {
     cy.visit('/404');
-    cy.waitForAnimations();
     cy.injectAxe();
     cy.checkA11y(null, null, terminalLog);
   });
