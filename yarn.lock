@@ -6699,6 +6699,34 @@ gatsby-telemetry@^1.10.0:
     node-fetch "^2.6.1"
     uuid "3.4.0"
 
+gatsby-theme-mate@^1.0.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-mate/-/gatsby-theme-mate-1.1.0.tgz#3ad34f199beb0410844043180f5a24cf0b5959cb"
+  integrity sha512-H1qbyExSJDSBYj7vMsNkTIFZ8WhYUfy6xNRWcRqGPGWrgTPJZu5uuC4r/31OFuhoXnX5XdjMfz2eUsNRmwS6Gg==
+  dependencies:
+    "@fortawesome/fontawesome-svg-core" "^1.2.32"
+    "@fortawesome/free-brands-svg-icons" "^5.15.1"
+    "@fortawesome/free-solid-svg-icons" "^5.15.1"
+    "@fortawesome/react-fontawesome" "^0.1.12"
+    "@rebass/preset" "^4.0.5"
+    "@tippy.js/react" "^3.1.1"
+    babel-plugin-styled-components "^1.12.0"
+    gatsby-plugin-manifest "^2.12.1"
+    gatsby-plugin-react-helmet "^3.10.0"
+    gatsby-plugin-styled-components "^3.10.0"
+    gatsby-plugin-typescript "^2.12.1"
+    gatsby-source-contentful "^4.6.3"
+    gatsby-source-medium "^2.10.0"
+    gatsby-transformer-remark "^2.16.1"
+    polished "^4.1.1"
+    react-awesome-reveal "^3.7.0"
+    react-headroom "^3.1.0"
+    react-helmet "^6.1.0"
+    react-markdown "^5.0.3"
+    react-text-loop "^2.3.0"
+    rebass "^4.0.7"
+    styled-components "^5.2.1"
+
 gatsby-transformer-remark@^2.16.1:
   version "2.16.1"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-2.16.1.tgz#43f092ccd982c4971acff8c1d9339beea40236bb"

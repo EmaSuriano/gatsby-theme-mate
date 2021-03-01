@@ -1,7 +1,7 @@
-import baseTheme, { Theme } from '@rebass/preset';
+import baseTheme from '@rebass/preset';
 import colors from './colors.json';
 
-export const theme: Theme = {
+export const theme = {
   ...baseTheme,
   colors,
   queries: {

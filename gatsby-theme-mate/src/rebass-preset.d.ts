@@ -1,22 +1,21 @@
-import { Theme } from '@rebass/preset';
-import 'styled-components';
+interface RebassTheme {
+  colors: Colors;
+  fonts: Fonts;
+  fontSizes?: number[] | null;
+  fontWeights: FontWeights;
+  lineHeights: LineHeights;
+  space?: number[] | null;
+  sizes: Sizes;
+  radii: Radii;
+  shadows: Shadows;
+  text: Text;
+  queries: Queries;
+  variants: any;
+  buttons: any;
+}
 
 declare module '@rebass/preset' {
-  export interface Theme {
-    colors: Colors;
-    fonts: Fonts;
-    fontSizes?: number[] | null;
-    fontWeights: FontWeights;
-    lineHeights: LineHeights;
-    space?: number[] | null;
-    sizes: Sizes;
-    radii: Radii;
-    shadows: Shadows;
-    text: Text;
-    queries: Queries;
-    variants: any;
-    buttons: any;
-  }
+  export interface Theme extends RebassTheme {}
 
   interface Colors {
     text: string;
@@ -79,8 +78,4 @@ declare module '*.svg' {
 declare module '*.json' {
   const value: any;
   export default value;
-}
-
-declare module 'styled-components' {
-  export interface DefaultTheme extends Theme {}
 }

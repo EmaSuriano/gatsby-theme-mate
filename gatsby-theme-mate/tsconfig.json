@@ -10,7 +10,7 @@
     "jsx": "react",
     "lib": ["es2017"],
     "skipLibCheck": true,
-    "types": [],
+    "typeRoots": ["src/custom.d.ts"],
     "resolveJsonModule": true
   },
   "include": ["src/**/*"],
