@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { lighten } from 'polished';
 
 type Props = {
   href: string;
@@ -29,19 +28,14 @@ const ScrollLink = styled.a`
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  transition: opacity 0.4s;
 
   @media only screen and (max-width: 700px) {
     display: none;
   }
 
   &:hover {
-    & rect {
-      stroke: ${({ theme }) => lighten(0.3, theme.colors.primary)};
-    }
-
-    & circle {
-      fill: ${({ theme }) => lighten(0.3, theme.colors.primary)};
-    }
+    opacity: 0.7;
   }
 `;
 

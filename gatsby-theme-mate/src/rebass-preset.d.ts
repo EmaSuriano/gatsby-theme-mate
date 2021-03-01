@@ -1,21 +1,19 @@
-interface RebassTheme {
-  colors: Colors;
-  fonts: Fonts;
-  fontSizes?: number[] | null;
-  fontWeights: FontWeights;
-  lineHeights: LineHeights;
-  space?: number[] | null;
-  sizes: Sizes;
-  radii: Radii;
-  shadows: Shadows;
-  text: Text;
-  queries: Queries;
-  variants: any;
-  buttons: any;
-}
-
 declare module '@rebass/preset' {
-  export interface Theme extends RebassTheme {}
+  export interface Theme {
+    colors: Colors;
+    fonts: Fonts;
+    fontSizes?: number[] | null;
+    fontWeights: FontWeights;
+    lineHeights: LineHeights;
+    space?: number[] | null;
+    sizes: Sizes;
+    radii: Radii;
+    shadows: Shadows;
+    text: Text;
+    queries: Queries;
+    variants: any;
+    buttons: any;
+  }
 
   interface Colors {
     text: string;

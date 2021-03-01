@@ -47,11 +47,18 @@ const Project = ({
               <SocialLink name="Homepage" icon="globe" url={homepage} />
             </Box>
           </Flex>
-          <ImageLabel bg="primary" color="white" position="bottom-right" round>
+          <ImageLabel
+            bg="primary"
+            color="background"
+            position="bottom-right"
+            round
+          >
             {type}
           </ImageLabel>
           <Hide query="md">
-            <ImageLabel bg="muted">{publishedDate}</ImageLabel>
+            <ImageLabel bg="muted" color="primary">
+              {publishedDate}
+            </ImageLabel>
           </Hide>
         </ProjectTag>
       </ImageContainer>
