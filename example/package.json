@@ -14,7 +14,6 @@
     "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
   },
   "dependencies": {
-    "dotenv": "^8.2.0",
     "gatsby": "^2.32.3",
     "gatsby-theme-mate": "0.0.0",
     "react": "^16.12.0",

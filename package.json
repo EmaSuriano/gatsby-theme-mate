@@ -6,14 +6,17 @@
   "license": "0BSD",
   "scripts": {
     "clean": "yarn workspace example clean",
-    "start": "yarn workspace example start",
-    "build": "yarn workspace example build",
-    "test": "yarn workspace example test:ci",
+    "start": "env-cmd yarn workspace example start",
+    "build": "env-cmd yarn workspace example build",
+    "test": "env-cmd yarn workspace example test:ci",
     "check-types": "yarn workspace gatsby-theme-mate check-types",
     "release": "yarn workspace gatsby-theme-mate release"
   },
   "workspaces": [
     "gatsby-theme-mate",
     "example"
-  ]
+  ],
+  "devDependencies": {
+    "env-cmd": "^10.1.0"
+  }
 }
