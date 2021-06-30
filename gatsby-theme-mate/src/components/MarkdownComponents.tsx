@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Text } from 'rebass';
-import styled from 'styled-components';
+import ReactMarkdown from 'react-markdown';
+import styled, { css } from 'styled-components';
 
 const StyledLink = styled.a`
   display: inline-block;
@@ -33,9 +34,9 @@ const StyledLink = styled.a`
   }
 `;
 
-const Root = styled.div`
-  font-size: large;
+const MarkdownParagraph = styled(Text)`
   padding-bottom: 1em;
+  font-size: large;
   line-height: 2em;
 
   @media (max-width: 600px) {
@@ -44,25 +45,29 @@ const Root = styled.div`
   }
 `;
 
-const MarkdownParagraph = styled(Text)`
-  padding-bottom: 1em;
-`;
-
 const MarkdownList = styled.ul`
   margin: 0;
 `;
 
 const MarkdownListItem = styled.li`
   margin-bottom: 1em;
+
+  font-size: large;
+  line-height: 2em;
+
+  @media (max-width: 600px) {
+    line-height: 1.5em;
+    font-size: medium;
+  }
 `;
 
 type LinkProps = {
-  href: string;
+  href?: string;
   children: ReactNode;
 };
 
 const MarkdownLink = ({ href, children }: LinkProps) => {
-  const isInnerLink = href.startsWith('#');
+  const isInnerLink = href?.startsWith('#');
 
   return isInnerLink ? (
     <StyledLink href={href}>{children}</StyledLink>
@@ -72,10 +77,16 @@ const MarkdownLink = ({ href, children }: LinkProps) => {
     </StyledLink>
   );
 };
-export default {
-  root: Root,
-  paragraph: MarkdownParagraph,
-  list: MarkdownList,
-  listItem: MarkdownListItem,
-  link: MarkdownLink,
+
+type MarkdownComponents = React.ComponentProps<
+  typeof ReactMarkdown
+>['components'];
+
+const Components: MarkdownComponents = {
+  p: MarkdownParagraph,
+  ul: MarkdownList,
+  li: MarkdownListItem,
+  a: MarkdownLink,
 };
+
+export default Components;
