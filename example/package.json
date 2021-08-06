@@ -7,13 +7,14 @@
   "scripts": {
     "start": "gatsby develop",
     "clean": "gatsby clean",
+    "serve": "gatsby serve -p 5000",
     "build": "gatsby build",
     "cy": "DETERMINISTIC=true percy exec -t 350 -h cdn-images-1.medium.com -- cypress",
     "test": "yarn cy run",
     "test:ui": "yarn cy open"
   },
   "dependencies": {
-    "gatsby": "^3.8.1",
+    "gatsby": "^3.11.0",
     "gatsby-theme-mate": "0.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -21,8 +22,8 @@
   "devDependencies": {
     "@percy/cli": "^1.0.0-beta.63",
     "@percy/cypress": "^3.1.1",
-    "axe-core": "^4.2.3",
-    "cypress": "^7.6.0",
+    "axe-core": "^4.3.2",
+    "cypress": "^8.2.0",
     "cypress-axe": "^0.12.2",
     "percy": "^0.28.6"
   }
