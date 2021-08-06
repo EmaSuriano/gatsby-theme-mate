@@ -14,7 +14,7 @@
   ],
   "release": {
     "branches": [
-      "main"
+      "master"
     ]
   },
   "scripts": {
