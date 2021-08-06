@@ -5,7 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import { Fade } from 'react-awesome-reveal';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
-import markdownRenderer from '../components/MarkdownRenderer';
+import components from '../components/MarkdownComponents';
 import { useAboutMeQuery } from '../queries/useAboutMeQuery';
 import { SECTION } from '../utils/constants';
 
@@ -18,7 +18,7 @@ const About = () => {
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]} mt={2}>
           <Fade direction="down" triggerOnce>
-            <ReactMarkdown source={markdown} renderers={markdownRenderer} />
+            <ReactMarkdown children={markdown} components={components} />
           </Fade>
         </Box>
 
