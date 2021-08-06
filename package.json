@@ -10,9 +10,9 @@
     "clean": "yarn example clean",
     "start": "yarn example start",
     "build": "yarn example build",
-    "serve": "yarn example build && serve example/public",
+    "serve": "yarn example serve",
     "test": "yarn example test",
-    "test:ci": "start-server-and-test serve 5000",
+    "test:ci": "yarn build && start-server-and-test serve 5000",
     "check-types": "yarn theme check-types",
     "release": "yarn theme release"
   },
@@ -22,7 +22,6 @@
   ],
   "devDependencies": {
     "env-cmd": "^10.1.0",
-    "serve": "^12.0.0",
-    "start-server-and-test": "^1.12.5"
+    "start-server-and-test": "^1.13.1"
   }
 }
