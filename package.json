@@ -5,18 +5,24 @@
   "main": "index.js",
   "license": "0BSD",
   "scripts": {
-    "clean": "yarn workspace example clean",
-    "start": "env-cmd --silent yarn workspace example start",
-    "build": "env-cmd --silent yarn workspace example build",
-    "test": "env-cmd --silent yarn workspace example test:ci",
-    "check-types": "yarn workspace gatsby-theme-mate check-types",
-    "release": "yarn workspace gatsby-theme-mate release"
+    "example": "env-cmd --silent yarn workspace example",
+    "theme": "env-cmd --silent yarn workspace gatsby-theme-mate",
+    "clean": "yarn example clean",
+    "start": "yarn example start",
+    "build": "yarn example build",
+    "serve": "yarn example build && serve example/public",
+    "test": "yarn example test",
+    "test:ci": "start-server-and-test serve 5000",
+    "check-types": "yarn theme check-types",
+    "release": "yarn theme release"
   },
   "workspaces": [
     "gatsby-theme-mate",
     "example"
   ],
   "devDependencies": {
-    "env-cmd": "^10.1.0"
+    "env-cmd": "^10.1.0",
+    "serve": "^12.0.0",
+    "start-server-and-test": "^1.12.5"
   }
 }

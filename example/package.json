@@ -8,9 +8,9 @@
     "start": "gatsby develop",
     "clean": "gatsby clean",
     "build": "gatsby build",
-    "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
-    "test:ui": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
-    "test:ci": "DETERMINISTIC=true start-server-and-test 8000"
+    "cy": "DETERMINISTIC=true percy exec -t 350 -h cdn-images-1.medium.com -- cypress",
+    "test": "yarn cy run",
+    "test:ui": "yarn cy open"
   },
   "dependencies": {
     "gatsby": "^3.8.1",
@@ -24,7 +24,6 @@
     "axe-core": "^4.2.3",
     "cypress": "^7.6.0",
     "cypress-axe": "^0.12.2",
-    "percy": "^0.28.6",
-    "start-server-and-test": "^1.12.5"
+    "percy": "^0.28.6"
   }
 }
