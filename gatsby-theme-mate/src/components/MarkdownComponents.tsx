@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { Text } from 'rebass';
-import { Components } from 'react-markdown';
+import { Components as MarkdownComponents } from 'react-markdown';
 import styled from 'styled-components';
 
 const StyledLink = styled.a`
@@ -78,7 +78,7 @@ const MarkdownLink = ({ href, children }: LinkProps) => {
   );
 };
 
-const Components: Components = {
+const Components: MarkdownComponents = {
   p: MarkdownParagraph,
   ul: MarkdownList,
   li: MarkdownListItem,
