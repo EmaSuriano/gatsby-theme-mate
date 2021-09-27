@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Text } from 'rebass';
-import ReactMarkdown from 'react-markdown';
-import styled, { css } from 'styled-components';
+import { Components } from 'react-markdown';
+import styled from 'styled-components';
 
 const StyledLink = styled.a`
   display: inline-block;
@@ -34,7 +34,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const MarkdownParagraph = styled(Text)`
+const MarkdownParagraph: React.FC = styled(Text)`
   padding-bottom: 1em;
   font-size: large;
   line-height: 2em;
@@ -78,11 +78,7 @@ const MarkdownLink = ({ href, children }: LinkProps) => {
   );
 };
 
-type MarkdownComponents = React.ComponentProps<
-  typeof ReactMarkdown
->['components'];
-
-const Components: MarkdownComponents = {
+const Components: Components = {
   p: MarkdownParagraph,
   ul: MarkdownList,
   li: MarkdownListItem,
