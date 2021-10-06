@@ -33,3 +33,14 @@ exports.createPages = async ({ actions }, themeOptions) => {
     component: NotFoundTemplate,
   });
 };
+
+exports.onCreateWebpackConfig = ({ actions }) => {
+  actions.setWebpackConfig({
+    resolve: {
+      alias: {
+        assert: require.resolve('assert'),
+      },
+      fallback: { fs: false },
+    },
+  });
+};

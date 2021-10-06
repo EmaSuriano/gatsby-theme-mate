@@ -22,7 +22,7 @@
     "release": "npx semantic-release"
   },
   "peerDependencies": {
-    "gatsby": "^3.8.1"
+    "gatsby": "^3"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
@@ -31,6 +31,7 @@
     "@fortawesome/react-fontawesome": "^0.1.15",
     "@rebass/preset": "^4.0.5",
     "@tippy.js/react": "^3.1.1",
+    "assert": "^2.0.0",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby-plugin-image": "^1.11.0",
     "gatsby-plugin-manifest": "^3.11.0",
