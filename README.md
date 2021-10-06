@@ -1,4 +1,4 @@
-## Gatsby Theme Mate
+## Gatsby Theme: Mate 🧉
 
 [![Build](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/build.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/build.yml)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ema-suriano/gatsby-theme-mate)
