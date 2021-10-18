@@ -1,6 +1,6 @@
 ## Gatsby Theme: Mate 🧉
 
-[![Build](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/build.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/build.yml)
+[![Build](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/master.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-theme-mate/actions/workflows/master.yml)
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Ema-suriano/gatsby-theme-mate)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f532a32d-4fc1-441d-aa28-cdc5e2c2e79c/deploy-status)](https://app.netlify.com/sites/gatsby-theme-mate/deploys)
 
