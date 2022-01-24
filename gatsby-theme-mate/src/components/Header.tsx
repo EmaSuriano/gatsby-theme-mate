@@ -3,7 +3,6 @@ import Headroom from 'react-headroom';
 import { Box, Link as RebassLink, Flex, Image } from 'rebass/styled-components';
 import styled from 'styled-components';
 import Link from './Link';
-import { capitalize } from '../utils/string';
 import { useHelmetQuery } from '../queries/useHelmetQuery';
 import { SECTION } from '../utils/constants';
 import { getSectionHref } from '../utils/helpers';
@@ -37,7 +36,7 @@ const Header = () => {
             .map((id) => (
               <Box key={id} ml={[2, 3]} color="background" fontSize={[2, 3]}>
                 <Link href={`#${id}`} tabIndex={0}>
-                  {capitalize(id)}
+                  {SECTION[id]}
                 </Link>
               </Box>
             ))}
