@@ -31,7 +31,7 @@ const Header = () => {
           </Flex>
         </RebassLink>
         <Flex mr={[0, 3, 5]}>
-          {Object.keys(SECTION)
+          {(Object.keys(SECTION) as Array<keyof typeof SECTION>)
             .filter((id) => id !== 'home')
             .map((id) => (
               <Box key={id} ml={[2, 3]} color="background" fontSize={[2, 3]}>
