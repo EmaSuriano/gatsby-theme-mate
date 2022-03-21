@@ -19,6 +19,7 @@ module.exports = ({
       'gatsby-plugin-typescript',
       'gatsby-plugin-styled-components',
       'gatsby-transformer-remark',
+      'gatsby-plugin-image',
       {
         resolve: 'gatsby-plugin-manifest',
         options: {
