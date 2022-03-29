@@ -22,7 +22,7 @@
     "release": "npx semantic-release"
   },
   "peerDependencies": {
-    "gatsby": "^3"
+    "gatsby": "^4"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
