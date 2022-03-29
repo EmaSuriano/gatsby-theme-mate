@@ -45,11 +45,11 @@ const MarkdownParagraph: React.FC = styled(Text)`
   }
 `;
 
-const MarkdownList = styled.ul`
+const MarkdownList: React.FC = styled.ul`
   margin: 0;
 `;
 
-const MarkdownListItem = styled.li`
+const MarkdownListItem: React.FC = styled.li`
   margin-bottom: 1em;
 
   font-size: large;
