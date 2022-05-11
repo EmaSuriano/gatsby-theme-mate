@@ -27,7 +27,7 @@ module.exports = ({
           short_name: 'Mate',
           start_url: landingPath,
           background_color: colors.background,
-          theme_color: colors.primary,
+          theme_color_in_head: false,
           display: 'minimal-ui',
           icon: 'icon.png',
         },
