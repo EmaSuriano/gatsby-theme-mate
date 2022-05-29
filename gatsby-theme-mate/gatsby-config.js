@@ -15,6 +15,7 @@ module.exports = ({
       deterministic,
     },
     plugins: [
+      'gatsby-plugin-fontawesome-css',
       'gatsby-plugin-react-helmet',
       'gatsby-plugin-typescript',
       'gatsby-plugin-styled-components',
