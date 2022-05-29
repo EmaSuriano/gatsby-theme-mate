@@ -3,12 +3,15 @@ import {
   IconName,
   findIconDefinition,
   IconDefinition,
+  IconPack,
 } from '@fortawesome/fontawesome-svg-core';
 import { prefix as brandPrefix } from '@fortawesome/free-brands-svg-icons';
 import { prefix as basePrefix } from '@fortawesome/free-solid-svg-icons';
 import { ICONS } from '../icons';
 
-export const loadIcons = () => library.add(...ICONS);
+type IconDefinitionOrPack = IconDefinition | IconPack;
+export const loadIcons = () =>
+  library.add(...(ICONS as IconDefinitionOrPack[]));
 
 export const getIconDefinition = (
   iconName: IconName,
