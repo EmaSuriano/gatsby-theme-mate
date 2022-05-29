@@ -6,7 +6,7 @@
 
 > Gatsby theme for [gatsby-starter-mate](https://github.com/EmaSuriano/gatsby-starter-mate)
 
-**[Check the Demo ✨](https://gatsby-starter-mate.netlify.com/)**
+**[Check the Demo ✨](https://mate.gatsbyjs.io/)**
 
 ## Contributing 💪
 
