@@ -43,7 +43,7 @@
     "gatsby-source-medium": "^4.10.0",
     "gatsby-transformer-remark": "^5.10.1",
     "gatsby-plugin-fontawesome-css": "^1.2.0",
-    "react-awesome-reveal": "^3.8.1",
+    "react-awesome-reveal": "^4.0.1",
     "react-headroom": "^3.2.0",
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.1",
