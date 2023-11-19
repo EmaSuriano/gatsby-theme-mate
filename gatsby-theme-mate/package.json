@@ -12,11 +12,6 @@
     "PWA",
     "portfolio"
   ],
-  "release": {
-    "branches": [
-      "master"
-    ]
-  },
   "scripts": {
     "check-types": "tsc -p . --noEmit",
     "release": "npx semantic-release"
@@ -55,6 +50,7 @@
     "styled-components": "^6.1.1"
   },
   "devDependencies": {
+    "@semantic-release/git": "^10.0.1",
     "@types/react-headroom": "^3.2.3",
     "@types/react-helmet": "^6.1.9",
     "@types/rebass": "^4.0.13",
