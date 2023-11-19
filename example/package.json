@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "gatsby": "^4.25.7",
-    "gatsby-theme-mate": "0.0.0",
+    "gatsby-theme-mate": "0.0.0-semantic-release",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
