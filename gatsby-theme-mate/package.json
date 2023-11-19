@@ -22,17 +22,21 @@
     "release": "npx semantic-release"
   },
   "peerDependencies": {
-    "gatsby": "^4"
+    "gatsby": "^4",
+    "react": "^18",
+    "react-dom": "^18"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
-    "@fortawesome/free-brands-svg-icons": "^5.15.4",
-    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@rebass/preset": "^4.0.5",
     "@tippy.js/react": "^3.1.1",
-    "assert": "^2.0.0",
-    "babel-plugin-styled-components": "^2.0.6",
+    "assert": "^2.1.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "gatsby-plugin-fontawesome-css": "^1.2.0",
     "gatsby-plugin-image": "^2.10.0",
     "gatsby-plugin-manifest": "^4.10.1",
     "gatsby-plugin-react-helmet": "^5.10.0",
@@ -42,19 +46,18 @@
     "gatsby-source-contentful": "^7.8.1",
     "gatsby-source-medium": "^4.10.0",
     "gatsby-transformer-remark": "^5.25.1",
-    "gatsby-plugin-fontawesome-css": "^1.2.0",
-    "react-awesome-reveal": "^3.8.1",
-    "react-headroom": "^3.2.0",
+    "react-awesome-reveal": "^4.2.7",
+    "react-headroom": "^3.2.1",
     "react-helmet": "^6.1.0",
     "react-markdown": "^8.0.1",
     "react-text-loop": "^2.3.0",
     "rebass": "^4.0.7",
-    "styled-components": "^5.3.3"
+    "styled-components": "^6.1.1"
   },
   "devDependencies": {
-    "@types/react-headroom": "^2.2.2",
-    "@types/react-helmet": "^6.1.2",
-    "@types/rebass": "^4.0.9",
-    "typescript": "^4.6.2"
+    "@types/react-headroom": "^3.2.3",
+    "@types/react-helmet": "^6.1.9",
+    "@types/rebass": "^4.0.13",
+    "typescript": "^5.2.2"
   }
 }
